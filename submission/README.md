@@ -72,7 +72,7 @@ void QuadEstimatorEKF::UpdateFromIMU(V3F accel, V3F gyro)
 
 2. After running the simulator, it is possible to see that my attitude estimator needs to get within 0.1 rad for each of the Euler angles for at least 3 seconds.
 
-![Attitude Estimator](images/attitude_estimator.png)
+![Attitude Estimator](images/attitude_estimation.png)
 
 ___
 ## **Task 4:**  Prediction Step
