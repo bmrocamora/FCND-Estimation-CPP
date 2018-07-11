@@ -22,8 +22,9 @@ This file contains the following sections:
 4. Task 4: Prediction Step
 5. Task 5: Magnetometer Update
 6. Task 6: Closed Loop + GPS Update
-7. Task 7: Adding Your Controller
+7. Task 7: Adding My Controller
 8. Acknowledgements
+
 ___
 ## **Task 2:**  Sensor Noise
 
@@ -161,7 +162,7 @@ void QuadEstimatorEKF::Predict(float dt, V3F accel, V3F gyro)
 }
 ```
 ___
-## **Task 3:** Magnetometer Update
+## **Task 5:** Magnetometer Update
 
 1. The function `UpdateFromMag()`.  
 ```
@@ -202,7 +203,7 @@ void QuadEstimatorEKF::UpdateFromMag(float magYaw)
 ![Magnetometer Update](images/mag_update.png)
 
 ___
-## **Task 2:** Closed Loop + GPS Update
+## **Task 6:** Closed Loop + GPS Update
 
 1. The function `UpdateFromGPS()`.
 ```
@@ -232,12 +233,11 @@ void QuadEstimatorEKF::UpdateFromGPS(V3F pos, V3F vel)
 }
 ```
 2. Checking the goal. *Your objective is to complete the entire simulation cycle with estimated position error of < 1m.*
+
 ![GPS Update](images/gps_update.png)
 
 ___
-## **Task 2:** Step 6: Adding Your Controller
-
-Up to this point, we have been working with a controller that has been relaxed to work with an estimated state instead of a real state.  So now, you will see how well your controller performs and de-tune your controller accordingly.
+## **Task 7:** Adding My Controller
 
 1. Replace `QuadController.cpp`  and `QuadControlParams.txt`.
 
@@ -267,6 +267,7 @@ KiPosZ = 12
 kpVelXY = 2
 kpVelZ = 6
 ```
+
 ![GPS Update w/ My Controller Detuned](images/gps_update_my_controller_detuned.png)
 
 ## Acknoledgments ##
